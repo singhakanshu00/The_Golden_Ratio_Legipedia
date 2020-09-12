@@ -9,6 +9,8 @@ app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
+mongoose.connect("mongodb://localhost:27017/goldenDB", {useNewUrlParser: true, useUnifiedTopology: true });
+
 
 const feedSchema = {
   firstName: String,
@@ -72,15 +74,6 @@ app.post("/contacts", (req,res)=>{
     res.redirect("/");
 });
 
-mongoose.connect("mongodb+srv://akanshu00:7699662622@2000@cluster0.rh9q5.mongodb.net/goldenDb?retryWrites=true&w=majority", {useNewUrlParser: true, useUnifiedTopology: true })
-    //.set("useCreateIndex", true)
-    .then(()=>{
-        let port = 3000;
-        
-        app.listen(port, function(){
-            console.log("app successfully started");
-        });
-    })
-    .catch(err => {
-        console.log(err);
-    });
+app.listen(3000, function() {
+    console.log("Server started on port 3000");
+  });
