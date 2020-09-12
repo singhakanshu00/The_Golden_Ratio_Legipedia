@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <link rel="stylesheet" type="text/css" href="/css/styles2.css">
+    <!-- Add font awesome CDN-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+   <title>Golden Ratio | LegiPedia</title>
+    </head>
+     <body>
+   <!-- contact section -->
+         <section id="contact-section">
+           <div class="container">
+           	 <h2>Contact Us</h2>
+              <p>Email us and keep in touch with us..</p>
+             <div class="contact-form">
+
+                  <!-- First grid -->
+               <div>
+                 <i class="fa fa-facebook"></i><a class="form-info" href="https://www.facebook.com/jasprit.khurrana" style="text-decoration: none;"> Facebook</a><br>
+                 
+                 <i class="fa fa-envelope"></i><span class="form-info">  akanshusingh0002@Gmail.com</span><br>
+                 <i class="fa fa-github"></i><a class="form-info" href="https://github.com/singhakanshu00" style="text-decoration: none;">  Github </a><br> 
+                 <i class="fa fa-linkedin"></i><a class="form-info" href="https://www.linkedin.com/in/akanshu-singh-68b18b191/" style="text-decoration: none;">  LinkedIn </a><br>
+               </div>
+               
+                   <!-- second grid -->
+           <div>        
+             <form  action="/contacts" method="post">
+               <input type="text" name="FName" placeholder="Your Name"  required>
+               <input type="text" name="LName" placeholder="Last Name"><br>
+               <input type="Email" name="email" placeholder="Email" required><br>
+               <input type="text" name="subject" placeholder="Subject of this message"><br>
+               <textarea name="feedback" name="feedback" placeholder="Feedback" rows="5" required></textarea><br>
+               <button class="submit" type="submit" name="button" onclick="alerting()" >Submit</button> 
+             </form>   
+               </div>
+             </div>
+           </div>
+         </section>
+
+         <script>
+           function alerting(){
+             alert("Your FeedBack Has been saved");
+           }
+         </script>
+     
+<%- include("partials/footer"); -%>
