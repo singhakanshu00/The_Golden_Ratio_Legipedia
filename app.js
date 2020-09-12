@@ -75,10 +75,8 @@ app.post("/contacts", (req,res)=>{
 mongoose.connect("mongodb+srv://akanshu00:7699662622@2000@cluster0.rh9q5.mongodb.net/goldenDb?retryWrites=true&w=majority", {useNewUrlParser: true, useUnifiedTopology: true })
     //.set("useCreateIndex", true)
     .then(()=>{
-        let port = process.env.PORT;
-        if (port == null || port == ""){
-          port = 3000;
-        }
+        let port = 3000;
+        
         app.listen(port, function(){
             console.log("app successfully started");
         });
